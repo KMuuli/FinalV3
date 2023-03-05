@@ -50,7 +50,7 @@ class Controller:
 
     def click_save(self):
         if 0 < len(self.model.name_list) <= len(self.model.task_list) > 0:
-            file = filedialog.asksaveasfilename(filetypes=[("txt file", ".txt")], defaultextenseion=".txt")
+            file = filedialog.asksaveasfilename(filetypes=[("txt file", ".txt")], defaultextension=".txt")
             with open(file, "w") as f:
                 for line in self.model.result_list:
                     f.write(f"{line}")
